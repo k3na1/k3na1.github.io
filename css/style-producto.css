@@ -1,0 +1,135 @@
+/*Variables*/
+:root{
+    --color-header: #8d6f6f;
+    --color-footer: #37474f;
+    --color-nav-bg: #324c69;
+    --color-text: #212121;
+    --padding-general: 1.5rem; /*24px*/
+}
+
+/*Reset*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-text);
+    gap: 1rem;
+    min-height: 100vh; /*v = viewport | h = height*/
+    background-color: #fafafa;
+}
+
+/* NAV*/
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0px;
+    background-color: var(--color-nav-bg);
+}
+
+nav h2{
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    color: white;
+}
+
+nav ul{
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+}
+
+nav li{
+    margin: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: rgb(173, 173, 173);
+    transition: color 0.3s ease;
+}
+
+nav li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+/*Producto*/
+.producto {
+    background-color: #a6e8fc;
+    padding: 50px 20px;
+}
+  
+.producto-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+  
+.producto-imagen img {
+    width: 300px;
+    height: 400px;
+    background-color: #ffcccc; /* fondo por si no hay imagen */
+    border-radius: 4px;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+}
+  
+.producto-info h1 {
+    margin-bottom: 20px;
+}
+  
+.producto-info p {
+    margin-bottom: 20px;
+}
+  
+.precio {
+    font-weight: bold;
+    font-size: 24px;
+}
+  
+.boton-comprar {
+    background-color: #4c53af;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+  
+.boton-comprar:hover {
+    background-color: #44589c;
+}
+
+/*Footer*/
+footer{
+    background-color: var(--color-footer);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+  /* RESPONSIVE */
+@media (max-width: 768px) {
+    .producto-contenido {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .producto-imagen img {
+      width: 100%;
+      height: auto;
+    }
+}
